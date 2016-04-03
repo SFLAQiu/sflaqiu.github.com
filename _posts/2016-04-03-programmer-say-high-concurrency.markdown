@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "大话程序猿眼里的高并发"
-date:   2015-02-10 15:14:54
-categories: 大话高并发
+date:   2016-04-03 13:00:00
+categories: 高并发
+excerpt: 大话高并发
 ---
 
 * content
