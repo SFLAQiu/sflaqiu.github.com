@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "大话程序“猿”眼里的Redis"
-date:   2015-02-15 22:14:54
+title:  "大话程序猿眼里的Redis"
+date:   2016-04-03 14:00:00
 categories: redis
 excerpt: 大话redis
 ---
