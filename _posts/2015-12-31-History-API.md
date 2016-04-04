@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "大话 程序猿 眼里的 安全"
-date:   2016-04-04 18:06:05
-categories: 安全
-excerpt: 安全
+title:  "前端处理动态 url 和 pushStatus 的使用"
+date:   2015-12-31 23:06:05
+categories: JavaScript
+excerpt: History Api 用法, pushState, replaceState
 ---
 
 * content
