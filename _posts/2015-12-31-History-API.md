@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "前端处理动态 url 和 pushStatus 的使用"
+title:  "大话 程序猿 眼里的 WEB安全"
 date:   2015-12-31 23:06:05
 categories: JavaScript
 excerpt: History Api 用法, pushState, replaceState
@@ -10,6 +10,7 @@ excerpt: History Api 用法, pushState, replaceState
 {:toc}
 
 # WEB安全  
+
 ## 索引
 * SQL脚本注入
 * XSS 跨站脚本攻击
