@@ -1,281 +1,152 @@
 ---
 layout: post
-title:  "判断两个数组是否相似 (arraysSimilar)"
-date:   2015-04-06 15:14:54
-categories: JavaScript
-excerpt: JavaScript 算法，typeof instanceof Object.prototype.toString.apply() 的使用方法。完成 arraysSimilar 方法，判断传入的两个数组是否相似。请在index.html文件中，编写arraysSimilar函数，实现判断传入的两个数组是否相似。
+title:  "大话 程序猿 眼里的 安全"
+date:   2016-04-04 23:06:10
+categories: 安全
+excerpt: 安全  
 ---
 
 * content
 {:toc}
 
-## 题目
 
-题目来自 [慕课网 JavaScript 深入浅出 1-6 编程练习](http://imooc.com/code/5760)    
+# WEB安全
 
-请在 index.html 文件中，编写 arraysSimilar 函数，实现判断传入的两个数组是否相似。具体需求：    
-
-1. 数组中的成员类型相同，顺序可以不同。例如 [1, true] 与 [false, 2] 是相似的。
-2. 数组的长度一致。
-3. 类型的判断范围，需要区分: String, Boolean, Number, undefined, null, 函数, 日期, window.
-
-当以上全部满足，则返回**"判定结果:通过"**，否则返回**"判定结果:不通过"**。    
-
-题目给出了 index.html 如下：
-
-	<!DOCTYPE HTML>
-	<html>
-	<head>
-	    <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
-	    <title>Untitled Document</title>
-	    
-	</head>
-	<body>
-	    <script type="text/javascript">   
-	        /*
-	         * param1 Array 
-	         * param2 Array
-	         * return true or false
-	         */
-	        function arraysSimilar(arr1, arr2){
-	        
-	        }
-	    </script>
-	    <script src="testData.js"></script>
-	</body>
-	</html>
-
-其中 testData.js 是测试用例，代码如下
-
-	var result = function() {
-	    //以下为多组测试数据
-	    var cases = [{
-	        arr1: [1, true, null],
-	        arr2: [null, false, 100],
-	        expect: true
-	    }, {
-	        arr1: [
-	            function() {},
-	            100
-	        ],
-	        arr2: [100, {}],
-	        expect: false
-	    }, {
-	        arr1: [null, 999],
-	        arr2: [{},
-	            444
-	        ],
-	        expect: false
-	    }, {
-	        arr1: [window, 1, true, new Date(), "hahaha", (function() {}), undefined],
-	        arr2: [undefined, (function() {}), "okokok", new Date(), false, 2, window],
-	        expect: true
-	    }, {
-	        arr1: [new Date()],
-	        arr2: [{}],
-	        expect: false
-	    }, {
-	        arr1: [window],
-	        arr2: [{}],
-	        expect: false
-	    }, {
-	        arr1: [undefined, 1],
-	        arr2: [null, 2],
-	        expect: false
-	    }, {
-	        arr1: [new Object, new Object, new Object],
-	        arr2: [{}, {},
-	            null
-	        ],
-	        expect: false
-	    }, {
-	        arr1: null,
-	        arr2: null,
-	        expect: false
-	    }, {
-	        arr1: [],
-	        arr2: undefined,
-	        expect: false
-	    }, {
-	        arr1: "abc",
-	        arr2: "cba",
-	        expect: false
-	    }];
-
-	    //使用for循环, 通过arraysSimilar函数验证以上数据是否相似，如相似显示“通过”,否则"不通过",所以大家要完成arraysSimilar函数,具体要求，详见任务要求。    
-	    for (var i = 0; i < cases.length; i++) {
-	        if (arraysSimilar(cases[i].arr1, cases[i].arr2) !== cases[i].expect) {
-	            document.write("不通过！case" + (i + 1) + "不正确！arr1=" + JSON.stringify(cases[i].arr1) + ", arr2=" + JSON.stringify(cases[i].arr2) + " 的判断结果不是" + cases[i].expect);
-	            return false;
-	        }
-	    }
-	    return true;
-
-	}();
-	document.write("判定结果:" + (result ? "通过" : "不通过"));
+## 索引
+* SQL脚本注入
+* XSS 跨站脚本攻击
+* CSRF跨站请求伪造
+* HTTP劫持
+* DDOS攻击
+* 其他
 
 ---
 
-## 解答
+## SQL脚本注入
+危害等级：☆☆☆☆☆☆   
+简介：SQL脚本注入，就是在请求URL的参数中传入SQL语句，然后导致DAL中的语句+注入的SQL语句连接上DB进行SQL语句的执行；  
+攻击力：轻则数据暴露，刷爆数据库，重则表数据被恶意编辑，删除，或者表被删除；   
+场景：http://wwww.xxx.com/search?title=123 进行标题内容的查询，如果DAL层中的语句使用拼接的方式去写，
+如：
+``` C# 
+//DAL
+public List<MDatas> searchs(var title=""){
+    if(title.isNullOrEmpty())reurn;
+    var sqlStr=@"
+        select fields 
+        from tablename
+        where title title='"+title+"'";
+    //下面 链接DB执行语句返回数据table绑定对象集合 省略。。。
+    //....
+}
+```
 
-各位读者在看解答前也可以自己考虑一下，看看咱们的想法是否一致，期待您在本文的留言。
+当我请求数据接口的时候：http://wwww.xxx.com/search?title=1' or 1=1; --   
+这个时候就会查出所有的表数据，如果我在后面插入一条获取删除表的语句，等危险的SQL操作，那就GAME OVER了。
 
----
+防御：
+.net本身有这个安全机制，只要传入的参数是有SQL，或者JavaScript会提示危险参数，可以通过配置webconfig，或者路由方法的属性来开启和关闭。
+但是最保险的方案还是要自己平时在写DAL的时候要注意，SQL语句不要使用拼接的方式，都使用参数化的方式，这样就不会出现SQL注入的问题了；
+如：
 
-### 思路
+``` C# 
+//DAL
+public List<MDatas> searchs(var title=""){
+    if(title.isNullOrEmpty())reurn;
+    var sqlStr=@"
+        select fields 
+        from tablename
+        where title title=@title;
+    //下面 链接DB执行语句返回数据table绑定对象集合 省略。。。
+    //....
+}
 
-通过观察测试用例，可以发现，最后三个用例有不是数组的。所以我们可以先判断传入的参数是否是数组。   
-又因为题目中要求数组长度必须一致，这也是第二个限制条件。   
-最后再区分具体的类型。   
-
-理清思路我们可以分为以下步骤：   
-
-1. 判断传入的参数是否为数组 (使用 `instanceof` 方法)
-2. 检查两个数组长度是否一致
-3. 分别判断数组内元素的基本数据类型 (使用 `typeof` 方法)
-4. 因为 `typeof` 只能检查基本数据类型，对于 `null`, `Date`, `window` 返回的都是 `object`，所以使用 `Object.prototype.toString.apply()` 来检查这些对象类型，其返回值为：`'[object Null]'`, `'[object Date]'`, `'[object global]'`
-5. 分别比较每个数组内元素的各种类型的个数，如果都相等，那么这两个数组是相似的。
-
----
-
-### 具体实现代码
-
-JavaScript代码如下
-
-	/**
-	 * =====================================================
-	 * 请在index.html文件中，编写arraysSimilar函数，实现判断传入的两个数组是否相似。具体需求：
-	 * 1. 数组中的成员类型相同，顺序可以不同。例如[1, true] 与 [false, 2]是相似的。
-	 * 2. 数组的长度一致。
-	 * 3. 类型的判断范围，需要区分:String, Boolean, Number, undefined, null, 函数，日期, window.
-	 *
-	 * 当以上全部满足，则返回"判定结果:通过"，否则返回"判定结果:不通过"。
-	 * ===================================================== 
-	 */
-
-	/*
-	* param1 Array
-	* param2 Array
-	* return true or false
-	*/
-	function arraysSimilar(arr1, arr2){
-		if (arr1 instanceof Array && arr2 instanceof Array ) {	//先判断传入的是否是数组
-			if (arr1.length == arr2.length) {					//判断数组长度
-				console.log("same-length");
-				console.log(arr1);
-				console.log(arr2);
-				//开始判断数组内部是否相似
-				return sameLengthArraysSimilar(arr1, arr2);
-			} else{
-				//两个数组长度不同返回false
-				return false;
-			}
-		} else {
-			//传入的参数不是数组返回false
-			return false;
-		}
-	}
-
-	/**
-	 * 判断两个等长的数组内部是否相似
-	 * 遍历数组
-	 * arr1中元素各种类型出现的个数是否和arr2中元素各种类型出现的个数相同
-	 * @param  {Array} arr1 数组1
-	 * @param  {Array} arr2 数组2
-	 * @return {true,false}
-	 */
-	function sameLengthArraysSimilar(arr1,arr2) {
-		var numInArr1 = 0;
-		var numInArr2 = 0;
-		var booleanInArr1 = 0;
-		var booleanInArr2 = 0;
-		var funInArr1 = 0;
-		var funInArr2 = 0;
-		var undefinedInArr1 = 0;
-		var undefinedInArr2 = 0;
-		var stringInArr1 = 0;
-		var stringInArr2 = 0;
-		var nullInArr1 = 0;
-		var nullInArr2 = 0;
-		var dateInArr1 = 0;
-		var dateInArr2 = 0;
-		var windowInArr1 = 0;
-		var windowInArr2 = 0;
-
-		for (var i = 0; i < arr1.length; i++) {
-			if(typeof arr1[i] === 'number' ){
-				numInArr1 ++;
-			} else if(typeof arr1[i] === 'boolean'){
-				booleanInArr1 ++;
-			} else if(typeof arr1[i] === 'function'){
-				funInArr1 ++;
-			} else if(typeof arr1[i] === 'undefined'){
-				undefinedInArr1 ++;
-			} else if(typeof arr1[i] === 'string'){
-				stringInArr1 ++;
-			} else if(typeof arr1[i] ==='object'){
-				if(Object.prototype.toString.apply(arr1[i]) === '[object Null]'){
-					nullInArr1 ++;
-				} else if(Object.prototype.toString.apply(arr1[i]) === '[object Date]'){
-					dateInArr1 ++;
-				} else if(Object.prototype.toString.apply(arr1[i]) === '[object global]'){
-					windowInArr1 ++;
-				}
-			}
-
-			if(typeof arr2[i] === 'number'){
-				numInArr2 ++;
-			} else if(typeof arr2[i] === 'boolean'){
-				booleanInArr2 ++;
-			} else if(typeof arr2[i] === 'function'){
-				funInArr2 ++;
-			} else if(typeof arr2[i] === 'undefined'){
-				undefinedInArr2 ++;
-			} else if(typeof arr2[i] === 'string'){
-				stringInArr2 ++;
-			} else if(typeof arr2[i] ==='object'){
-				if(Object.prototype.toString.apply(arr2[i]) === '[object Null]'){
-					nullInArr2 ++;
-				} else if(Object.prototype.toString.apply(arr2[i]) === '[object Date]'){
-					dateInArr2 ++;
-				} else if(Object.prototype.toString.apply(arr2[i]) === '[object global]'){
-					windowInArr2 ++;
-				}
-			}
-		}
-
-		console.log("num---"+numInArr1);
-		console.log("num---"+numInArr2);
-		console.log("boo---"+booleanInArr1);
-		console.log("boo---"+booleanInArr2);
-		console.log("null---"+nullInArr1);
-		console.log("null---"+nullInArr2);
-		console.log("window---"+windowInArr1);
-		console.log("window---"+windowInArr2);
-		console.log("date---"+dateInArr1);
-		console.log("date---"+dateInArr2);
-		console.log("string---"+stringInArr1);
-		console.log("string---"+stringInArr2);
-		console.log("fun---"+funInArr1);
-		console.log("fun---"+funInArr2);
-		console.log("undefined---"+undefinedInArr1);
-		console.log("undefined---"+undefinedInArr2);
-
-		if(numInArr1 == numInArr2 && booleanInArr1==booleanInArr2 && funInArr1==funInArr2 && undefinedInArr1==undefinedInArr2 && stringInArr1==stringInArr2 && nullInArr1==nullInArr2 && dateInArr1==dateInArr2 && windowInArr1==windowInArr2){
-			console.log('================================true');
-			return true;
-		}else{
-			console.log('================================false');
-			return false;
-		}
-	}
+```
 
 ---
 
-## 总结
+## XSS 跨站脚本攻击
+危害等级：☆☆☆☆☆☆   
+简介：跨站的脚本攻击，就是在请求URL参数中，或者form提交的内容中注入JavaScript脚本；    
+攻击力：轻则用户体验异常弹窗，重则用户cookie数据被盗取，引导用户到非法地址；   
+场景：http://www.xx.com/userinfo/?username=吊毛&description=sb
+userinfo视图：
+``` HTML
+<!-- 省略顶部 -->
+<div>
+    <p>@username<p>
+    <p>@description</p>
+</div>
+<!-- 省略底部 -->
 
-* 上述代码完美的跑完所有的测试用例，读者 [点击这里查看结果](http://gaohaoyang.github.io/javascript-test/arraysSimilar/)，并且可以按 `f12` 看 Console 信息， 里面有代码的执行过程。  
-* 当然你也可以复制本文的 JavaScript 代码，在 [慕课网的习题](http://imooc.com/code/5760) 下跑一下，也可以看到 `判定结果:通过` 的结果
-* 完整源代码在我的 GitHub [javascript-test/arraysSimilar/](https://github.com/Gaohaoyang/javascript-test/tree/master/arraysSimilar) 仓库中   
-* 其实我的代码逻辑并不复杂，有点**空间换时间**的感觉，执行效率应该是较高的。没有用 JavaScript 封装的任何函数，完全是自己写的。其实代码除去 `console.log()` 也并没有多少行。
-* 各位读者有什么好的想法欢迎留言交流！
+```
+当我修改参数：http://www.xx.com/userinfo/?username=吊毛&description=sb<script type="text/javascript">alert('sb')</script>
+
+userinfo视图：
+``` HTML
+<!-- 省略顶部 -->
+<div>
+    <p>吊毛<p>
+    <p>
+        sb
+        <script type="text/javascript">alert('sb')</script>
+    </p>
+</div>
+<!-- 省略底部 -->
+
+```
+
+
+这个时候把这个地址分享给别人，他一打开就会弹出一个弹窗，然后容是：xx；
+如果这个时候我注入的脚本是获取cookie到我的接口，然后把地址分享给其他的用户，这样就可以通过获取到的cookie模拟用户的登陆了；
+form提交就不举例了，也是一样，就是提交的内容里输入JavaScript 脚本，然后绑定内容的时候没有进行处理，这样就会导致上面一样的问题。
+
+防御：在视图绑定数据的时候(前端拼接，或者服务端脚本绑定)需要对数据进行HTML编码
+结果如：
+``` HTML
+<!-- 省略顶部 -->
+<div>
+    <p>吊毛<p>
+    <p>
+        sb
+        &lt;script type=&quot;text/javascript&quot;&gt;alert(&#39;sb&#39;)&lt;/script&gt;
+    </p>
+</div>
+<!-- 省略底部 -->
+
+```
+---
+
+## CSRF跨站请求伪造
+危害等级：☆☆☆☆☆☆   
+简介：跨站请求伪造，就是当A站用户未退出的情况下，通过其他非法B站发起非法请求来触发A站的请求操作；用户在不知情的请求下被诱导操作    
+攻击力：以你名义发送邮件，发消息，盗取你的账号，甚至于购买商品，虚拟货币转账，个人隐私泄露以及财产安全    
+场景：
+![此图引用hyddd博客](http://pic002.cnblogs.com/img/hyddd/200904/2009040916453171.jpg)   
+具体可以看[博文](http://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html)     
+防御：用户进入操作页面的时候绑定令牌到隐藏input，服务端进行令牌的校验，重要的操作，如：提现，充值，等，添加验证码   
+
+--- 
+
+### HTTP劫持
+危害等级：☆☆☆☆    
+简介：你打开的是百度的页面，右下角弹出唐老师的不孕不育广告。        
+攻击力：注入广告   
+情景：在公共场所有很多免费的WIFI，有些免费的WIFI会对HTTP进行劫持，然后修改html注入广告，网络供应商也会进行HTTP劫持 ，
+如使用移动网络的时候经常会出现移动广告    
+防御：可以将HTTP替换成HTTPS这样，劫持后没有证书无法进行解密，就无法注入广告了。     
+
+
+---
+
+### DOSS攻击
+危害等级：☆☆☆☆☆☆☆     
+简介：分布式拒绝服务攻击，俗称洪水攻击，通过木马寄生在用户机子，当成肉机，需要的时候发起群攻    
+攻击力：刷爆服务器    
+防御：需要再服务器部署安全防火墙。(具体方案待研究... ...)     
+
+--- 
+
+未完待续。。。   
+
+    
