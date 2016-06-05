@@ -9,7 +9,10 @@ excerpt: 安全
 * content
 {:toc}
 
-![安全](http://www.aisy.com/data/attachment/forum/201503/16/113836k6bj6j0j5tj1t0mj.jpg)
+![安全](http://www.aisy.com/data/attachment/forum/201503/16/113836k6bj6j0j5tj1t0mj.jpg)    
+
+---
+
 #开场
 `魂淡别碰的孩子(接口)`,
 作为后端程序猿自己写的`接口`就像自己的`孩子`一样，尽然制造出来了，那就要对其以后的人生负责到底；  
@@ -91,6 +94,7 @@ excerpt: 安全
 
 ---
 ![哈哈](http://f.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=4c4cd0ed233fb80e0c8469d303e10318/54fbb2fb43166d2202efc948442309f79152d256.jpg)
+
 > 转载请申明原地址，谢谢合作   
 > 如有任何想说的请留言哦，我会根据大家的建议修改有疑义的内容和新增总结    
 > 欢迎大家关注我的[Github](https://github.com/SFLAQiu)   
