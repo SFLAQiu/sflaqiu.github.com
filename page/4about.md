@@ -7,11 +7,20 @@ icon: heart
 
 * content
 {:toc}
+.NET高级后端工程师，[返还网](http://www.fanhuan.com)     
 
-## 关于我
+一个从事WEB后端开发，一心牵挂前端技术，为成为真正的全栈攻城狮不间断的前进！
+  
+工作年限：(2011-12-1~至今)
+* 2012-06 毕业于福建工程软件学院
+* 2011-12-1 入职福州创意嘉和信息科技有限公司 百宝箱事业部
+    * 从事百宝箱软件，辅助工具软件的相关业务接口开发，辅助工具官网，活动等站点开发
+    * 除了后端开发工作，同时也会需要兼顾前端JS支持UI交互，从ajax到jquery 动画效果。
+* 2014-05-01  转战厦门，入职灵感方舟信息科技有限 返还网 
+    * 起初从事PC项目组，后转APP组相关业务开发
+    * 致力于大数据，高并发，安全问题，优化重构
+* 至今
 
-> 就职：.NET高级后端工程师，[返还网](http://www.fanhuan.com)       
-> 工作年限：(2011-12-1~至今)
 ---
 
 ## 技术栈
@@ -19,8 +28,8 @@ icon: heart
 #### 后端   
 
 * Asp.Net 
- * MVC,WebApi
- * ADO Enterprise Library/SQLHelper
+    * MVC,WebApi
+    * ADO Enterprise Library/SQLHelper
 * 关系数据库:
     * sqlserver (多)
     * mysql (少)
