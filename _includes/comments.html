@@ -1,4 +1,7 @@
 {% if site.duoshuo_shortname %}
+<p style="display:none;">gogo</p>
+{% endif %}
+
 <!-- 多说评论框 start -->
 <div class="ds-thread" data-thread-key="{{ site.url }}{{ page.url }}" data-title="{{page.title}}" data-url="{{ site.url }}{{ page.url }}"></div>
 <!-- 多说评论框 end -->
@@ -15,7 +18,6 @@ var duoshuoQuery = {short_name:"aqiublog"};
 	})();
 	</script>
 <!-- 多说公共JS代码 end -->
-{% endif %}
 
 {% if site.disqus_shortname %}
 <div id="disqus_thread"></div>
