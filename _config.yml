@@ -7,7 +7,7 @@
 
 # Site settings
 title: SFLYQ
-brief-intro: 任何傻瓜都能写出计算机可以理解的代码，好的程序员能写出人能读懂的代码
+brief-intro: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://sflaqiu.github.io" # the base hostname & protocol for your site
 
