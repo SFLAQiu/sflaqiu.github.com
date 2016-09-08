@@ -1,23 +1,21 @@
 ---
 layout: post
-title:  "大话 程序猿 眼里的 接口"
-date:   2016-06-05 14:35:05
+title:  "大话程序猿眼里的接口"
+date:   2016-06-05 14:35:05 +0800
 categories: 安全
-excerpt: 安全
+tags: 安全 签名参数 接口 抓包工具
+author: YYQ
 ---
 
 * content
 {:toc}
 
-![安全](http://demo.thankbabe.com/blog/images/anquan1.jpg)    
-
----
-
-## 开场   
-
-`魂淡别碰的孩子(接口)`,
 作为后端程序猿自己写的`接口`就像自己的`孩子`一样，尽然制造出来了，那就要对他以后的人生负责到底；  
 随着业务的壮大，需要支撑业务接口也越来越多，使用的用户量变大，虎视眈眈的黑客们视机而动，总是在业务中寻找着可以窃取他人利益的入口，所以我们应该多考虑安全性问题，防范于未然。
+
+
+![安全](http://demo.thankbabe.com/blog/images/anquan1.jpg)    
+
 
 ---
 
