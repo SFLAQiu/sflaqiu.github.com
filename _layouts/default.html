@@ -13,6 +13,28 @@
     {% include backToTop.html %}
     <script src="{{ " /js/main.js " | prepend: site.baseurl }}" charset="utf-8"></script>
     <script src="{{ " /js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+    <!--统计代码-->
+    <script type="text/javascript">
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?635b4278dea79f0edb13616aea4458d9";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <!-- 在新窗口中打开 -->
+      <script type="text/javascript">
+        function addBlankTargetForLinks () {
+          $('a[href^="http"]').each(function(){
+              $(this).attr('target', '_blank');
+          });
+        }
+        //每次在有DOM插入时触发
+        $(document).bind('DOMNodeInserted', function(event) {
+          addBlankTargetForLinks();
+        });
+      </script>
   </body>
 
 </html>
