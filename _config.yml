@@ -6,43 +6,43 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: SFLYQ
-brief-intro: Web Dev Engineer
+title: HyG
+brief-intro: Front-end Dev Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://blog.thankbabe.com/ # the base hostname & protocol for your site
+url: "http://gaohaoyang.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username: sflyq
-facebook_username: sflyq
-github_username:  sflaiu
-email: 563644741@qq.com
-weibo_username: sflyq
-zhihu_username: sflyq
-linkedIn_username: sflyq
-dribbble_username:sflyq
+twitter_username: gaohaoyang126
+facebook_username: gaohaoyang.water
+github_username:  Gaohaoyang
+email: gaohaoyang126@126.com
+weibo_username: 3115521wh
+zhihu_username: gaohaoyang
+linkedIn_username: gaohaoyang
+dribbble_username:
 
 description_footer: 本站记录我前端之旅的沿途风景！
 
 # comments
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: aqiublog
-# disqus_shortname: aqiublog
+duoshuo_shortname: #hygblog
+disqus_shortname: gaohaoyang
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
 # xxxxx字符串
-baidu_tongji_id: 635b4278dea79f0edb13616aea4458d9
-#google_analytics_id: UA-72449510-4 # google 分析追踪id
+baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
+google_analytics_id: UA-72449510-4 # google 分析追踪id
 
 # Build settings
 markdown: kramdown
 
 kramdown:
-  input: SFLYQ
+  input: GFM
   syntax_highlighter: rouge
 
 # port
