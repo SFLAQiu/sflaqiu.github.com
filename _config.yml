@@ -14,14 +14,14 @@ url: "http://blog.thankbabe.com/ # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username: gaohaoyang126
-facebook_username: gaohaoyang.water
-github_username:  Gaohaoyang
-email: gaohaoyang126@126.com
-weibo_username: 3115521wh
-zhihu_username: gaohaoyang
-linkedIn_username: gaohaoyang
-dribbble_username:
+twitter_username: sflyq
+facebook_username: sflyq
+github_username:  sflaiu
+email: 563644741@qq.com
+weibo_username: sflyq
+zhihu_username: sflyq
+linkedIn_username: sflyq
+dribbble_username:sflyq
 
 description_footer: 本站记录我前端之旅的沿途风景！
 
@@ -36,7 +36,7 @@ duoshuo_shortname:aqiublog
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
 # xxxxx字符串
 baidu_tongji_id: 635b4278dea79f0edb13616aea4458d9
-google_analytics_id: UA-72449510-4 # google 分析追踪id
+#google_analytics_id: UA-72449510-4 # google 分析追踪id
 
 # Build settings
 markdown: kramdown
