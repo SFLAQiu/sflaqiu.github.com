@@ -3,7 +3,7 @@ layout: post
 title:  "大话程序猿眼里的接口"
 date:   2016-06-05 14:35:05 +0800
 categories: 安全
-tags: 安全 签名参数 接口 抓包工具
+tags: 安全 签名 接口 抓包
 author: YYQ
 ---
 
