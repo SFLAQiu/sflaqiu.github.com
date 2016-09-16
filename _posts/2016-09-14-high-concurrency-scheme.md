@@ -45,7 +45,7 @@ author: YYQ
         * 主从分离，集群
     * mogodb 
         * 主从分离，集群
-    * mamecache
+    * memcache
         * 主从分离，集群
 * cdn
     * html
