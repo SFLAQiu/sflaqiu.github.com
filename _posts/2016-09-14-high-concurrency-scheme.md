@@ -43,7 +43,7 @@ author: YYQ
 * nosql
     * redis 
         * 主从分离，集群
-    * mogodb 
+    * mongodb 
         * 主从分离，集群
     * memcache
         * 主从分离，集群
