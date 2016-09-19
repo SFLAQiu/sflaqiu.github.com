@@ -4,13 +4,12 @@ layout: default
 
 <div class="page clearfix" index>
     <div class="left">
-        <h1 style="float:left;">Welcome 来了既是缘分!</h1>
-        <div style="float:left;">
+        <h1 class="welcome">Welcome 来了既是缘分!</h1>
+        <div>
             <input id="toggle-heart" type="checkbox" checked="checked"/>
             <label for="toggle-heart" aria-label="like">❤</label>
         </div>
-        <br/>
-        <small>这里记录着我的学习，总结，分享之路</small>
+        <small cass="desc">这里记录着我的学习，总结，分享之路</small>
         <hr>
         <ul>
             {% for post in paginator.posts %}

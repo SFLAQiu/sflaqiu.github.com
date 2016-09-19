@@ -46,6 +46,7 @@
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  z-index: 2;
 }
 [for='toggle-heart']:before, [for='toggle-heart']:after {
   position: absolute;
