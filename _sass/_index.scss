@@ -163,7 +163,8 @@
 }
 @media screen and (max-width: 770px) {
     .page[index] {
-        .left>ul li {
+        .left
+        >ul li {
             h2 {
                 font-size: 22px;
             }
@@ -181,6 +182,10 @@
                     margin: 0;
                 }
             }
+        }
+        .desc{
+            margin-top: 20px;
+            display: block;
         }
     }
 }
