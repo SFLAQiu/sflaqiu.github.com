@@ -6,6 +6,10 @@
             color: #223253;
         }
     }
+    .clear{
+        display: block;
+        clear: both;
+    }
     .left {
         >ul {
             padding: 0;
