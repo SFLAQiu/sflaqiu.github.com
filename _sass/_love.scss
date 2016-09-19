@@ -2,6 +2,7 @@
 [id='toggle-heart'] {
   position: absolute;
   left: -100vw;
+  z-index:2;
 }
 [id='toggle-heart']:checked + label {
   color: #e2264d;
