@@ -56,10 +56,11 @@ icon: heart
     * 前端MVVM框架：vue.js react.js
     * AMD规范框架：commonjs requirejs
     * 面向对象编程JS：typescript 
-    * React-Native  (学习)
     * 爬虫：PhantomJS Casperjs (了解)
     * 自动部署：grunt gulp 
     * 框架管理：npm browser   
+* React-Native (学习)
+* Weex (学习)
 
 #### 其他
 
