@@ -1,18 +1,3 @@
-body {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0;
-  height: 100vh;
-  background: -webkit-linear-gradient(315deg, #121721, #000);
-  background: linear-gradient(135deg, #121721, #000);
-  font: 1em verdana, sans-serif;
-}
 
 [id='toggle-heart'] {
   position: absolute;
