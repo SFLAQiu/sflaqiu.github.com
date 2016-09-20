@@ -2,7 +2,7 @@
 layout: post
 title:  "大话程序猿眼里的高并发架构"
 date:   2016-09-14 14:35:05 +0800
-categories: Redis
+categories: 高并发
 tags: 高并发 高并发架构 
 author: YYQ
 ---
