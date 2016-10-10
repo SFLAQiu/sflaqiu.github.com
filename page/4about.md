@@ -74,7 +74,8 @@ icon: heart
 
 ## 联系我
 
-* email：[563644741@qq.com](mailto:{{ site.email }})
+* 微信:DreamYYQ
+* Email：[563644741@qq.com](mailto:{{ site.email }})
 * QQ:563644741
 
 ---
