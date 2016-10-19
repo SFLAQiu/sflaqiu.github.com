@@ -116,6 +116,3 @@ author: YYQ
 ---
 ![哈哈](http://demo.thankbabe.com/blog/images/ms.jpg)
 
-> 转载请申明原地址，谢谢合作   
-> 如有任何想说的请留言哦，我会根据大家的建议修改有疑义的内容和新增总结    
-> 欢迎大家关注我的[Github](https://github.com/SFLAQiu)   
