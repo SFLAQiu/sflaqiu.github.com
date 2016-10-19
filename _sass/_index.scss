@@ -194,8 +194,10 @@
     .ad-box-right{
         display: none;
     }
-    .ad-box-bottom{
-        display: block;
-    }
 }
 
+@media screen and (min-width: 770px){
+     .ad-box-bottom{
+        display: none;
+    }
+}
