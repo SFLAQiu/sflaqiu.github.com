@@ -65,3 +65,26 @@
         border: 1px solid red;
     }
 }
+.ad-box-bottom{
+    position: fixed;
+    bottom: 5px;
+    border: 1px solid #fa4d48;
+    background-color: #fa4d48;
+    -webkit-border-radius: 10px;
+	border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;   
+    color: #fff600;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: -webkit-body;
+    .welfare{
+        font-size: 18px;
+        font-weight:bolder;
+        color: #fff600;
+    }
+}
+
