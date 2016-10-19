@@ -194,11 +194,8 @@
     .ad-box-right{
         display: none;
     }
-}
-
-@media screen and (min-width:770x){
     .ad-box-bottom{
-        display: none;
+        display: block;
     }
-
 }
+
