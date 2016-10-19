@@ -3,8 +3,10 @@
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </a>
 </div>
-<a class="ad-box-right" href="javascript:;">
+{% if site.ad_taobao_11 %}
+<a class="ad-box-right" href="{{site.ad_taobao_11}}">
     <span>淘宝</span>
     <span>红包</span>
     <span class="get">领取</span>
 </a>
+{% endif %}
