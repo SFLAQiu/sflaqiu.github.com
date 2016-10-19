@@ -33,3 +33,35 @@
         background: transparent;
     }
 }
+
+
+.ad-box-right{
+   position: fixed;
+    right: 3%;
+    bottom: 40%;
+    border: 1px solid #fa4d48;
+    background-color: #fa4d48;
+    height: 65px;
+    width: 40px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    color: #fff600;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 6px;
+    /*display: none;*/
+    span{
+        display: block;
+    }
+    span.get{
+    -webkit-border-radius: 100px;
+        border-radius: 100px;
+        background-color:#fff600;
+        padding:10px 2px;
+        margin-top: 5px;
+        color: #f9434a;
+        border: 1px solid red;
+    }
+}
