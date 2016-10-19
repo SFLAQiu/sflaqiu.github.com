@@ -34,17 +34,17 @@ layout: default
             {{content}}
             <blockquote>
                 <p>
+                    {% if site.ad_taobao_11 %}
+                    <br>
+                    感谢大家的支持，领取淘宝双11红包，获得推广费用来维持网站的运行，谢谢理解。  
+                    <a href="{{site.ad_taobao_11}}" target="_blank">点击领取</a>
+                    {% endif %}
                     转载请申明原文地址，谢谢合作
                     <br>
                     如有任何想说的请留言哦，我会根据大家的建议修改有疑义的内容和新增总结  
                     <br>
                     欢迎大家关注我的
                     <a href="https://github.com/SFLAQiu" target="_blank">Github</a>
-                    {% if site.ad_taobao_11 %}
-                    <br>
-                    <span>感谢大家的支持，经常网购的可以领取淘宝双11红包，我可以获得淘宝的推广费用来维持网站的运行，谢谢理解。</span>    
-                    <a href="{{site.ad_taobao_11}}" target="_blank">点击领取</a>
-                    {% endif %
                 </p>
             </blockquote>
         </article>
