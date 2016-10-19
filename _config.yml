@@ -10,7 +10,7 @@ title: SFLYQ
 brief-intro: "追逐全栈技术"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://sflaqiu.github.io" # the base hostname & protocol for your site
-ad_taobao_11: "http://blog.thankbabe.com"
+ad_taobao_11: ""
 
 permalink: /:year/:month/:day/:title/
 
