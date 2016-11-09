@@ -37,10 +37,15 @@ icon: bookmark
 ## 编程语言
 
 ### JavaScript
+* [前端资源教程 i5ting](https://cnodejs.org/topic/56ef3edd532839c33a99d00e)
+
+* [廖雪峰JavaScript教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
 
 * [JavaScript 标准参考教程（alpha） -阮一峰](http://javascript.ruanyifeng.com/)
 
 * [JavaScript Promise迷你书 -azu](http://liubin.org/promises-book/)
+
+* [前端的异步解决方案之Promise和Await Async](https://scq000.github.io/2016/11/05/前端的异步解决方案之Promise和Await-Async)
 
 * [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS)
 
@@ -52,25 +57,63 @@ icon: bookmark
 
 * [JavaScript 设计模式 系列 AlloyTeam](http://www.alloyteam.com/2012/10/common-javascript-design-patterns/)
 
-### ES2015
+### ES2015(ES6)
+* [《ECMAScript 6入门》 -阮一峰](https://github.com/ruanyf/es6tutorial)
 
-* [http://www.ecma-international.org/ecma-262/6.0/](http://www.ecma-international.org/ecma-262/6.0/)
-
-    ES2015规范
+* [EcmaScript6 全规范（含node） -ouvens](https://github.com/ouvens/es6-code-style-guide)
 
 * [30分钟掌握ES6/ES2015核心内容（上）](http://segmentfault.com/a/1190000004365693)
 
 * [30分钟掌握ES6/ES2015核心内容（下）](http://segmentfault.com/a/1190000004368132)
 
-* [《ECMAScript 6入门》 -阮一峰](https://github.com/ruanyf/es6tutorial)
+* [ES2015规范 英文](http://www.ecma-international.org/ecma-262/6.0/)
 
-* [EcmaScript6 全规范（含node） -ouvens](https://github.com/ouvens/es6-code-style-guide)
+### TypeScript
+
+* [TypeScript语法]( https://zhongsp.gitbooks.io/typescript-handbook/content/)
+
+
+### 前端博文
+
+* [前端 JSer 装逼手册](https://segmentfault.com/a/1190000005987011)
+
+* [6周学习计划，攻克JavaScript难关](https://zhuanlan.zhihu.com/p/23412169)
+
+
 
 ### NodeJS
 
 * [七天学会NodeJS -Nanqiao Deng](https://nqdeng.github.io/7-days-nodejs)
 
-## 框架&脚手架
+* [Node入门到精通 i5ting](https://i5ting.github.io/wechat-dev-with-nodejs/)
+
+* [高可用架构专用《全栈工程师之路-Node.js》 i5ting](https://github.com/i5ting/nodejs-fullstack)
+
+* [前后端分离的思考与实践](http://blog.jobbole.com/65513/)
+
+### 框架&脚手架&部署工具
+
+### Babel
+
+[Babel 入门教程](http://www.ruanyifeng.com/blog/2016/01/babel.html)
+
+### Bower
+
+[基础教程](https://segmentfault.com/a/1190000000349555#articleHeader6)
+
+### Yeoman
+
+* [yeoman 安装和使用 - 快速构建web应用](http://yijiebuyi.com/blog/a427ce8c25dd1339517ffa0a0b8f5896.html)
+
+### Gulp
+
+* [Gulp学习总结](http://www.cnblogs.com/morong/p/4469637.html)
+
+* [Gulp不完全入门教程](https://github.com/dwqs/blog/issues/23)
+
+### Grunt
+
+* [用grunt搭建自动化的web前端开发环境-完整教程](http://blog.csdn.net/wangfupeng1988/article/details/46418203/)
 
 ### webpack
 
@@ -115,6 +158,17 @@ icon: bookmark
 * [AngularJS 教程 \| 菜鸟教程](http://www.runoob.com/angularjs/angularjs-tutorial.html)
 
     类似 w3school 的入门 AngularJS 教程。
+
+
+### React-Native
+
+* [React-Native学习指南](https://github.com/reactnativecn/react-native-guide)
+
+### WEEX
+
+* [Weex中文文档 官方](https://github.com/weexteam/article/wiki/Weex%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3)
+
+* [Weex详解：灵活的移动端高性能动态化方案](http://www.infoq.com/cn/articles/introducing-weex/)
 
 ### 测试
 
